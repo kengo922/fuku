@@ -1,14 +1,9 @@
-.warp{
-  background-color: #f6f6f6;
-  min-width: 650px;
-}
 .bodies{
   margin: 30px auto 0;
   background-color: #fff;
-  height: 600px;
+  height: 650px;
   width: 70%;
   overflow: scroll;
- 
 }
 
 .head{
@@ -26,6 +21,10 @@
   border:1px #000000;
   border-style: solid; border-width: thin;
 }
+// #target{
+//   background-color: white;
+// }
+
 .head__down{
 	display: inline-block;
 	width: 100px;

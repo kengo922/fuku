@@ -1,9 +1,8 @@
-.warp
-  .bodies
-    .head
-      .head__up{style: "background-color: white;"} 
-      .head__down
-    %form
-      %input{ onclick: "location.reload()", type: "button", id: "target", value: "更新"}/
-    .post
-      = link_to "新規登録", new_product_path, class: "btn-default btn-gray"
+.bodies
+  .head
+    .head__up#target
+    .head__down
+  %form
+    %input{type: "button", value:"更新" ,onclick: "effect()"}/
+  .post
+    = link_to "新規登録", new_product_path, class: "btn-default btn-gray"
