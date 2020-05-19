@@ -64,3 +64,4 @@ gem 'pry-rails'
 gem 'rails-i18n' 
 gem "haml-rails"
 gem "jquery-rails"
+gem "gon"

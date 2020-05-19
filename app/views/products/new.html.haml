@@ -1,1 +1,11 @@
-ああああああああああ
+.main
+  = form_with model: @product, class: :form, local: true do |f| #form_with model: モデルクラスのインスタンス do |form|
+    = f.label :color
+    - ["black","white","blue","brown"].each do |color|
+      = f.check_box :color, {multiple: true}, color, nil
+      = color
+    -# = f.label :color
+    -# - ["black","white","blue","brown"].each do |color|
+    -#   = check_box :color, {multiple: true}, color, nil
+    -#   = color
+    = f.submit '投稿する', class: :form__btn
