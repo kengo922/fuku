@@ -1,7 +1,10 @@
 class ProductsController < ApplicationController
   
   def index
-    
+    @products = Product.all
+    @products.each do |product|
+      gon.product_color = product.product_color
+    end
   end
 
   def new
@@ -11,7 +14,6 @@ class ProductsController < ApplicationController
   
   def create
     @product = Product.new(product_params)
-    gon.product_color = @project
     if @product.save
       redirect_to root_path
     else
