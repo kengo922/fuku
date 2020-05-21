@@ -2,8 +2,9 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.all
-    @products.each do |product|
-      gon.product_color = product.product_color
+    @products.map do |product|
+      product_color = product.product_color
+      gon.product_color = product_color
     end
   end
 
