@@ -1,10 +1,11 @@
 class ProductsController < ApplicationController
   
   def index
-    @products = Product.all
-    @products.map do |product|
+    @products = Product.last(1)
+    @products.each do |product|
       product_color = product.product_color
-      gon.product_color = product_color
+      gon.product_color = JSON.parse(product_color)
+      # DBの値をJSON形に直す事で、JSで正常に値を使うことができる
     end
   end
 
@@ -29,3 +30,4 @@ class ProductsController < ApplicationController
  
 
 end
+
