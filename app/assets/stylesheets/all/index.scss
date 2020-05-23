@@ -5,6 +5,8 @@
   width: 70%;
   overflow: scroll;
 }
+
+
 $color1:  #F0DDC3;
 //中止位置を割り出す為のSCSS 同じ記述がたくさんある為、定義した
 .center1{
@@ -35,7 +37,10 @@ $color1:  #F0DDC3;
 	width: 100px;
   height: 70px;
 	border-radius:50%/ 0 0 80% 80%; //半円
-	background: $color1;
+  background: $color1;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 
 }
 
@@ -44,12 +49,17 @@ $body_upper_height1: 100px; //ボディーとブランク高さを定義
 .main_upper-body1{
   @extend .center1;
 }
+.upper_body{
+  background: $color1;
+}
 #upper-body-center1{
   width: 200px;
   height: 30px;
-  background: $color1;
   border-top-left-radius: 20px; //角丸の作成
   border-top-right-radius: 20px; //角丸の作成
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 //腕、胴、足の部位は同じ記述を使用する為、値を定義した。
@@ -64,7 +74,9 @@ $body_upper_height1: 100px; //ボディーとブランク高さを定義
 #upper-body-left{
   width: 40px;
   height: $body_upper_height1;
-  background: $color1;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .blank_upper_left1 {
   width: 5px;
@@ -72,16 +84,13 @@ $body_upper_height1: 100px; //ボディーとブランク高さを定義
   background-color: rgba(0,0,255,0);
   border-top-left-radius: 2px; //角丸の作成
   border-top-right-radius: 2px; //角丸の作成
+  border-top: 1px solid black;
 }
 #upper-body-center2{
   width: 110px;
   height: $body_upper_height1;
-  background: $color1;
-}
-#upper-body-rigth{
-  width: 40px;
-  height: $body_upper_height1;
-  background: $color1;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .blank_upper_rigth1{
   width: 5px;
@@ -89,8 +98,15 @@ $body_upper_height1: 100px; //ボディーとブランク高さを定義
   background-color: rgba(0,0,255,0);
   border-top-left-radius: 2px; //角丸の作成
   border-top-right-radius: 2px; //角丸の作成
+  border-top: 1px solid black;
 }
-
+#upper-body-rigth{
+  width: 40px;
+  height: $body_upper_height1;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
 
 //同じ記述がある為まとめた
 $body_upper_height2: 20px; //ボディーとブランク高さを定義
@@ -108,6 +124,9 @@ $body_upper_height2: 20px; //ボディーとブランク高さを定義
   height: $body_upper_height2;
   border-radius:50%/ 0 0 100% 100%; //半円
   background: $color1;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .blank_upper_left2 {
   @extend .blank_upper2;
@@ -115,7 +134,9 @@ $body_upper_height2: 20px; //ボディーとブランク高さを定義
 #upper-body-center3{
   width: 110px;
   height: $body_upper_height2;
-  background: $color1;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .blank_upper_rigth2 {
   @extend .blank_upper2;
@@ -126,8 +147,12 @@ $body_upper_height2: 20px; //ボディーとブランク高さを定義
   background-color: rgba(0,0,255,0);
   border-radius:50%/ 0 0 100% 100%; //半円
   background: $color1;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
+//足
 $leg_height: 120px; 
 .main_leg1{
   @extend .center1;
@@ -137,6 +162,9 @@ $leg_height: 120px;
   height: 40px;
   background: $color1;
   margin-top: 1px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .main_leg2{
   @extend .center2
@@ -145,28 +173,39 @@ $leg_height: 120px;
   width: 50px;
   height: $leg_height; 
   background: $color1;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 .blank_leg_center{
   background-color: rgba(0,0,255,0);
   width: 10px;
   height: $leg_height
 }
+#blank_leg{
+  border-top: 1px solid black;
+}
+
 #leg_rigth{
   width: 50px;
   height: $leg_height;
   background: $color1;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
-$shoes_height: 20px; 
+
+//靴
+$shoes_height: 30px; 
 .main_shoes{
   @extend .center2
 }
 .shoes#shoes_left{
-  width: 70px;
+  width: 80px;
   height: $shoes_height;
   background: $color1;
   //| 左上 | 右上 | 右下 | 左下 |
   border-radius: 15px 0 3px 4px;
+  border: 1px solid black;
 }
 .blank_shoes_center{
   background-color: rgba(0,0,255,0);
@@ -174,9 +213,10 @@ $shoes_height: 20px;
   height: $shoes_height;
 }
 .shoes#shoes_rigth{
-  width: 70px;
+  width: 80px;
   height: $shoes_height;
   background: $color1;
   //| 左上 | 右上 | 右下 | 左下 |
   border-radius: 0 15px 4px 3px;
+  border: 1px solid black;
 }

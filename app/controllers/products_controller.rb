@@ -4,9 +4,14 @@ class ProductsController < ApplicationController
   def index
     @products = Product.last(1)
     @products.each do |product|
-      product_color = product.product_color
-      gon.product_color = JSON.parse(product_color)
-      # DBの値をJSON形に直す事で、JSで正常に値を使うことができる
+      haed_color = product.haed_color
+      boy_color = product.boy_color
+      leg_color = product.leg_color
+      shose_color = product.shose_color
+      gon.haed_color = JSON.parse(haed_color)
+      gon.boy_color = JSON.parse(boy_color)
+      gon.leg_color = JSON.parse(leg_color)
+      gon.shose_color = JSON.parse(shose_color)
     end
   end
 
@@ -38,14 +43,14 @@ class ProductsController < ApplicationController
   
   private
   def product_params
-    params.require(:product).permit(product_color:[])
+    params.require(:product).permit(haed_color:[], boy_color:[], leg_color:[], shose_color:[])
   end
  
   def set_product
     @product = Product.find(params[:id])
-    # :edit, :update, :showにitem.idを与える必要がある為、記述した
   end
 
 end
+
 
 

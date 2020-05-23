@@ -20,14 +20,14 @@
     .leg#leg-center
   .main_leg2
     .leg#leg_left
-    .blank_leg_center
+    .blank_leg_center#blank_leg
     .leg#leg_rigth
   .main_shoes
     .shoes#shoes_left
     .blank_shoes_center
     .shoes#shoes_rigth
   %form
-    %input{type: "button", value:"更新" ,onclick:"effect()"}/
+    %input{type: "button", value:"更新" ,onclick:"effect1()"}/
   .post_new
     = link_to "新規登録", new_product_path, class: "btn-default btn-gray"
   .post_edit
