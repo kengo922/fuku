@@ -1,0 +1,19 @@
+= render 'layouts/flash_messages'
+.head_color
+  = form.collection_check_boxes :product_color, Color.all, :color_name, :color_display,  include_hidden: false
+.upper_body-color
+
+= form.submit '投稿する', class: :form__btn
+  
+      
+   
+
+
+
+
+-#  = f.collection_check_boxes :product_color, Color.all, :color_name, :color_name,  include_hidden: false
+-# ultiple: trueで複数チェックボックスの値を送ることができます。
+-# include_hidden: false これがないと配列ないの先頭に[""]が生成される為、消す動作を行っている。
+-# 第2引数 全ての色をデーターベースから呼び出している
+-# 第3引数 配列内にいれる値を取得している
+-# 第4引数 チェックボックスに表示する名前を表示

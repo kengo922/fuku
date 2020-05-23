@@ -1,0 +1,4 @@
+- flash.each do |message_type, message|
+  = content_tag(:p, message, class: "alert alert-#{message_type}")
+  // content_tag(:タグ名, "表示する文字", class: "クラス名") 
+

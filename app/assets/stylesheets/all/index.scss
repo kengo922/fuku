@@ -6,30 +6,117 @@
   overflow: scroll;
 }
 
-.head{
+//頭
+.main_head{
   border-bottom: 1px solid #f6f6f6;
   align-items: center;
   display: flex;
   flex-direction: column;
  
 }      
-.head__up{
+.head-up{
 	display: inline-block;
 	width: 100px;
-	height: 50px;
-	border-radius: 50% / 100% 100% 0 0;
+	height: 40px;
+	border-radius: 50% / 70% 70% 0 0;
   border:1px #000000;
   border-style: solid; border-width: thin;
 }
-// #target{
-//   background-color: white;
-// }
-
-.head__down{
+#head_color{
+  background-color: black;
+}
+.head-down{
 	display: inline-block;
 	width: 100px;
-  height: 50px;
-	border-radius:50%/ 0 0 100% 100%; 
+  height: 70px;
+	border-radius:50%/ 0 0 80% 80%; //半円
 	background: #F0DDC3;
 
+}
+
+//上半身
+.main_upper-body1{
+  align-items: center; //下記3つで中央に持ってくる
+  display: flex;
+  flex-direction: column;
+}
+#upper-body-color1{
+  width: 200px;
+  height: 30px;
+  background: #F0DDC3;
+  border-top-left-radius: 20px; //角丸の作成
+  border-top-right-radius: 20px; //角丸の作成
+}
+
+$body_height1: 100px; //ボディーとブランク高さを定義
+.main_upper-body2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+}
+#upper-body-left{
+  width: 40px;
+  height: $body_height1;
+  background: #F0DDC3;
+}
+.blank_upper_left1 {
+  width: 5px;
+  height: $body_height1;
+  background-color: rgba(0,0,255,0);
+  border-top-left-radius: 2px; //角丸の作成
+  border-top-right-radius: 2px; //角丸の作成
+}
+#upper-body-center1{
+  width: 110px;
+  height: $body_height1;
+  background: #F0DDC3;
+}
+#upper-body-rigth{
+  width: 40px;
+  height: $body_height1;
+  background: #F0DDC3;
+}
+.blank_upper_rigth1{
+  width: 5px;
+  height: $body_height1;
+  background-color: rgba(0,0,255,0);
+  border-top-left-radius: 2px; //角丸の作成
+  border-top-right-radius: 2px; //角丸の作成
+}
+
+$body_height2: 20px; //ボディーとブランク高さを定義
+.blank_upper2{
+  width: 5px;
+  height: $body_height2;
+  background-color: rgba(0,0,255,0)
+}
+
+.main_upper-body3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+}
+.upper-left-hand{
+  width: 40px;
+  height: $body_height2;
+  border-radius:50%/ 0 0 100% 100%; //半円
+  background: #F0DDC3;
+}
+.blank_upper_left2 {
+  @extend .blank_upper2;
+}
+#upper-body-center2{
+  width: 110px;
+  height: $body_height2;
+  background: #F0DDC3;
+}
+.blank_upper_rigth2 {
+  @extend .blank_upper2;
+}
+.upper-rigth-hand2{
+  width: 40px;
+  height: $body_height2;
+  background-color: rgba(0,0,255,0);
+  border-radius:50%/ 0 0 100% 100%; //半円
+  background: #F0DDC3;
 }
