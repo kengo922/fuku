@@ -42,23 +42,3 @@ function effect1(){
 };
 
 
-
-// function effect2(){ 
-//   var element2 = document.querySelectorAll("upper_body");
-//   // var node = Array.prototype.slice.call(element2,0); 
-
-//   var boy_color = gon.boy_color; //DBの値を取得
-//   var boy_color = gon.boy_color; //DBの値を取得 
-//   element2.style.backgroundColor = boy_color[index2]; 
-// }
-  // var element = document.querySelectorAll("leg");
-  // var colors = gon.leg_color; //DBの値を取得
-  // let index = Math.floor(Math.random() * colors.length);  
-  // element.style.backgroundColor = colors[index]; 
-
-  // var element = document.querySelectorAll("shoes");
-  // var colors = gon.shose_color; //DBの値を取得
-  // let index = Math.floor(Math.random() * colors.length);  
-  // element.style.backgroundColor = colors[index]; 
-
-

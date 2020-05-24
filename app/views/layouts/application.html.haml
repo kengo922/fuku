@@ -2,7 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Fuku
+    %title コーディネートアプリ
     = csrf_meta_tags
     = csp_meta_tag
     = Gon::Base.render_data
@@ -10,6 +10,9 @@
     = javascript_include_tag 'application'
   %body
     %header.header
-      .header__title
-        = link_to "配色コーデアプリ", '#', class: "header__title--text"
+      .header__sub__title
+        = link_to "自動配色選択コーディネートアプリ", '#', class: "header__sub__title--text"
+      .header__main__title
+        = link_to "Future", '#', class: "header__main__title--text"
+
     = yield
