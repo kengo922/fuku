@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :show, :update]
   
   def index
-    @products = Product.last(1)
+    @products = Product.last
     @products.each do |product|
       haed_color = product.haed_color
       boy_color = product.boy_color
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
       redirect_to edit_product_path
     end
   end
-  
+
   private
   def product_params
     params.require(:product).permit(haed_color:[], boy_color:[], leg_color:[], shose_color:[])

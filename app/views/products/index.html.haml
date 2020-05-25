@@ -31,7 +31,4 @@
   .post_new
     = link_to "新規登録", new_product_path, class: "btn-default btn-gray"
   .post_edit
-    = link_to "色編集", new_product_path, class: "btn-default btn-gray"
-
-
-.blank_left
+    = link_to "色編集", "/products/#{@products[0].id}/edit", class: "btn-default btn-gray"

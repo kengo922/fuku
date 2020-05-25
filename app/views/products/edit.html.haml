@@ -1,0 +1,5 @@
+.main
+  %h2.main_title
+    配色を選択して下さい
+  = form_with model: @products, class: :form, local: true do |form| #form_with model: モデルクラスのインスタンス do |form|
+    = render partial: "form", locals: { form: form }
