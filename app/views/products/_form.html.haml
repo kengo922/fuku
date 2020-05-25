@@ -2,13 +2,29 @@
   .main_errors
   = render 'layouts/flash_messages' 
   .head_color
-    = form.collection_check_boxes :haed_color, Color.all, :color_name, :color_display,  include_hidden: false
+    %label
+      ヘッドカラー
+      %span.form-require 必須
+      .select-wrap
+        = form.collection_check_boxes :haed_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
   .upper_body-color
-    = form.collection_check_boxes :boy_color, Color.all, :color_name, :color_display,  include_hidden: false
+    %label
+      ボディーカラー
+      %span.form-require 必須
+      .select-wrap
+        = form.collection_check_boxes :boy_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
   .leg-color
-    = form.collection_check_boxes :leg_color, Color.all, :color_name, :color_display,  include_hidden: false
+    %label
+      レッグカラー
+      %span.form-require 必須
+      .select-wrap
+        = form.collection_check_boxes :leg_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
   .shose-color
-    = form.collection_check_boxes :shose_color, Color.all, :color_name, :color_display,  include_hidden: false
+    %label
+      レッグカラー
+      %span.form-require 必須
+      .select-wrap
+        = form.collection_check_boxes :shose_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
   .post_new
     = form.submit '登録する', class: :form__btn
   

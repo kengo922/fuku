@@ -8,8 +8,6 @@ body{
     width: 100%;
     padding: 0 150px;
     background-color: #232f3e;
-    border: 1px solid;
-    border-bottom-color: #fff;
       &___sub__title{
         font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
         font-stretch: condensed;
@@ -36,4 +34,19 @@ body{
   font-size: 40px;
   line-height: 40px;
   font-weight: bolder;
+  font-style : italic;
 } 
+
+.footer {
+  z-index: 1;
+  height: 10px;
+  padding: 10px 0;
+  text-align: center;
+}
+p {
+  margin: 10px 0 0;
+}
+small {
+  font-size: 8px;
+  color: white;
+}

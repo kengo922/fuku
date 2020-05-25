@@ -1,12 +1,14 @@
 .main{
-  margin: 0px auto 0;
   background-color: #fff;
   height: 620px;
   width: 70%;
   overflow: scroll;
+  margin-top:20px;
+  margin-right:auto;
+  margin-bottom:0;
+  margin-left:auto;
   
 }
-
 
 $color1:  #F0DDC3;
 //中止位置を割り出す為のSCSS 同じ記述がたくさんある為、定義した
