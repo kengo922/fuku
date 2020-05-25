@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:edit, :show, :update]
   
   def index
-    @products = Product.last
+    @products = Product.last(1)
     @products.each do |product|
       haed_color = product.haed_color
       boy_color = product.boy_color

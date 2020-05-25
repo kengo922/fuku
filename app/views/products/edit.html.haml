@@ -3,3 +3,5 @@
     配色を選択して下さい
   = form_with model: @products, class: :form, local: true do |form| #form_with model: モデルクラスのインスタンス do |form|
     = render partial: "form", locals: { form: form }
+  .post_new
+    = link_to "戻る", root_path, class: "btn-default btn-gray"
