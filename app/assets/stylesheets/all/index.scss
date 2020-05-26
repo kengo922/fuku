@@ -11,6 +11,7 @@
 }
 
 $color1:  #F0DDC3;
+$color2:  #000000;
 //中止位置を割り出す為のSCSS 同じ記述がたくさんある為、定義した
 .center1{
   align-items: center; //下記3つで中央に持ってくる
@@ -53,7 +54,7 @@ $body_upper_height1: 100px; //ボディーとブランク高さを定義
   @extend .center1;
 }
 .upper_body{
-  background: $color1;
+  background: $color2;
 }
 #upper-body-center1{
   width: 200px;
@@ -163,7 +164,7 @@ $leg_height: 120px;
 #leg-center{
   width: 110px;
   height: 40px;
-  background: $color1;
+  background: $color2;
   margin-top: 1px;
   border-top: 1px solid black;
   border-left: 1px solid black;
@@ -175,7 +176,7 @@ $leg_height: 120px;
 #leg_left{
   width: 50px;
   height: $leg_height; 
-  background: $color1;
+  background: $color2;
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
@@ -191,7 +192,7 @@ $leg_height: 120px;
 #leg_rigth{
   width: 50px;
   height: $leg_height;
-  background: $color1;
+  background: $color2;
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
@@ -205,7 +206,7 @@ $shoes_height: 30px;
 .shoes#shoes_left{
   width: 80px;
   height: $shoes_height;
-  background: $color1;
+  background: $color2;
   //| 左上 | 右上 | 右下 | 左下 |
   border-radius: 15px 0 3px 4px;
   border: 1px solid black;
@@ -218,7 +219,7 @@ $shoes_height: 30px;
 .shoes#shoes_rigth{
   width: 80px;
   height: $shoes_height;
-  background: $color1;
+  background: $color2;
   //| 左上 | 右上 | 右下 | 左下 |
   border-radius: 0 15px 4px 3px;
   border: 1px solid black;

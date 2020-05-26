@@ -1,7 +1,25 @@
 .main_title{
-  text-align: center;
-  color: #232f3e;
   margin-bottom: 3px inset;
   border-style:#f6f6f6;
+  text-align: center;
+}
 
+
+.form-require {
+  background-color: #232f3e;;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: white;
+  font-size: 12px;
+  vertical-align: top;
+  font-weight: 600;
+}
+.select-wrap {
+  margin: 20px 0px;
+}
+.head_color,.upper_body-color,.leg-color,.shose-color{
+  padding-top: 10px;
+  border-bottom: 3px inset;
+  border-style:#f6f6f6;
 }
