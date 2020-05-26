@@ -30,10 +30,10 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product_head_array = @product.head_color.split(",")
-    @product_body_array = @product.boy_color.split(",")
-    @product_leg_array = @product.leg_color.split(",")
-    @product_shoes_array = @product.shoes_color.split(",")
+    # @product_head_array = @product.head_color.split(",")
+    # @product_body_array = @product.boy_color.split(",")
+    # @product_leg_array = @product.leg_color.split(",")
+    # @product_shoes_array = @product.shoes_color.split(",")
     @Colors = Color.all
   end
 

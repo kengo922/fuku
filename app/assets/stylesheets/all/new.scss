@@ -6,7 +6,7 @@
 
 
 .form-require {
-  background-color: #232f3e;;
+  background-color: #232f3e;
   margin: 0 0 0 8px;
   padding: 2px 4px;
   border-radius: 2px;
@@ -22,4 +22,17 @@
   padding-top: 10px;
   border-bottom: 3px inset;
   border-style:#f6f6f6;
+}
+.post_new{
+  margin-top: 5px;
+}
+.form_new_bottun{
+  margin-left: 265px;
+  color: white;
+  background-color: #232f3e;
+  border-radius: 100px;
+  width: 200px;
+  height: 30px;
+  font-weight: bold;
+  
 }

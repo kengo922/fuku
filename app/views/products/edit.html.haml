@@ -10,28 +10,29 @@
           ヘッドカラー
           %span.form-require 必須
           .select-wrap 
-            = form.collection_check_boxes :head_color, Color.where(params[:color_name]), :color_name, :color_display, {checked: @product_head_array.map(&:to_param), include_hidden: false}, class: "input-default"
+            = form.collection_check_boxes :head_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
       .upper_body-color
         %label
           ボディーカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :boy_color, Color.where(params[:boy_color]), :color_name, :color_display, {checked: @product_body_array.map(&:to_param), include_hidden: false},class: "input-default"
+            = form.collection_check_boxes :boy_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
       .leg-color
         %label
           レッグカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :leg_color, Color.where(params[:leg_color]), :color_name, :color_display,{checked: @product_leg_array.map(&:to_param), include_hidden: false},class: "input-default"
+            = form.collection_check_boxes :leg_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
       .shose-color
         %label
           レッグカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :shoes_color, Color.where(params[:shoes_color]), :color_name, :color_display, {checked: @product_shoes_array.map(&:to_param), include_hidden: false},class: "input-default"
+            = form.collection_check_boxes :shoes_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
       .post_new
-        = form.submit '登録する', class: :form__btn
-    
+        = form.submit '登録する', class: :form_bottun
+    .post_new
+      = link_to "戻る", root_path, class: "btn-default btn-gray"
       
    
 
@@ -43,5 +44,4 @@
 -# 第3引数 配列内にいれる値を取得している
 -# 第4引数 チェックボックスに表示する名前を表示
 
-  .post_new
-    = link_to "戻る", root_path, class: "btn-default btn-gray"
+ 
