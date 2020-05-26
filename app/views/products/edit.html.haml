@@ -1,7 +1,47 @@
 .main
   %h2.main_title
     配色を選択して下さい
-  = form_with model: @products, class: :form, local: true do |form| #form_with model: モデルクラスのインスタンス do |form|
-    = render partial: "form", locals: { form: form }
+  = form_with model: @product, class: :form, local: true do |form| #form_with model: モデルクラスのインスタンス do |form|
+    .main_new
+      .main_errors
+      = render 'layouts/flash_messages' 
+      .head_color
+        %label
+          ヘッドカラー
+          %span.form-require 必須
+          .select-wrap 
+            = form.collection_check_boxes :head_color, Color.where(params[:color_name]), :color_name, :color_display, {checked: @product_head_array.map(&:to_param), include_hidden: false}, class: "input-default"
+      .upper_body-color
+        %label
+          ボディーカラー
+          %span.form-require 必須
+          .select-wrap
+            = form.collection_check_boxes :boy_color, Color.where(params[:boy_color]), :color_name, :color_display, {checked: @product_body_array.map(&:to_param), include_hidden: false},class: "input-default"
+      .leg-color
+        %label
+          レッグカラー
+          %span.form-require 必須
+          .select-wrap
+            = form.collection_check_boxes :leg_color, Color.where(params[:leg_color]), :color_name, :color_display,{checked: @product_leg_array.map(&:to_param), include_hidden: false},class: "input-default"
+      .shose-color
+        %label
+          レッグカラー
+          %span.form-require 必須
+          .select-wrap
+            = form.collection_check_boxes :shoes_color, Color.where(params[:shoes_color]), :color_name, :color_display, {checked: @product_shoes_array.map(&:to_param), include_hidden: false},class: "input-default"
+      .post_new
+        = form.submit '登録する', class: :form__btn
+    
+      
+   
+
+-#  = f.collection_check_boxes :product_color, Color.all, :color_name, :color_name,  include_hidden: false
+-# ultiple: trueで複数チェックボックスの値を送ることができます。
+-# include_hidden: false これがないと配列ないの先頭に[""]が生成される為、消す動作を行っている。
+-# 第1引数 データベースに保存するカラム名
+-# 第2引数 全ての色をデーターベースから呼び出している
+-# 第3引数 配列内にいれる値を取得している
+-# 第4引数 チェックボックスに表示する名前を表示
+
   .post_new
     = link_to "戻る", root_path, class: "btn-default btn-gray"

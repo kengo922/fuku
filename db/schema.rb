@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 2020_05_20_043337) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "haed_color"
+    t.string "head_color"
     t.string "boy_color"
     t.string "leg_color"
-    t.string "shose_color"
+    t.string "shoes_color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

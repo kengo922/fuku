@@ -1,17 +1,17 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :show, :update]
+  before_action :set_product, only: [:edit, :update]
   
   def index
     @products = Product.last(1)
     @products.each do |product|
-      haed_color = product.haed_color
+      head_color = product.head_color
       boy_color = product.boy_color
       leg_color = product.leg_color
-      shose_color = product.shose_color
-      gon.haed_color = JSON.parse(haed_color)
+      shoes_color = product.shoes_color
+      gon.head_color = JSON.parse(head_color)
       gon.boy_color = JSON.parse(boy_color)
       gon.leg_color = JSON.parse(leg_color)
-      gon.shose_color = JSON.parse(shose_color)
+      gon.shoes_color = JSON.parse(shoes_color)
     end
   end
 
@@ -30,6 +30,11 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    @product_head_array = @product.head_color.split(",")
+    @product_body_array = @product.boy_color.split(",")
+    @product_leg_array = @product.leg_color.split(",")
+    @product_shoes_array = @product.shoes_color.split(",")
+    @Colors = Color.all
   end
 
   def update
@@ -43,7 +48,7 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(haed_color:[], boy_color:[], leg_color:[], shose_color:[])
+    params.require(:product).permit(head_color:[], boy_color:[], leg_color:[], shoes_color:[])
   end
  
   def set_product
