@@ -204,6 +204,7 @@ $shoes_height: 30px;
   @extend .center2
 }
 .shoes#shoes_left{
+  margin-top: 1px;
   width: 80px;
   height: $shoes_height;
   background: $color2;
@@ -212,11 +213,13 @@ $shoes_height: 30px;
   border: 1px solid black;
 }
 .blank_shoes_center{
+  margin-top: 1px;
   background-color: rgba(0,0,255,0);
   width: 10px;
   height: $shoes_height;
 }
 .shoes#shoes_rigth{
+  margin-top: 1px;
   width: 80px;
   height: $shoes_height;
   background: $color2;
@@ -228,10 +231,18 @@ $shoes_height: 30px;
 //投稿関連
 .form{
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.form_index_bottun{
-  margin-left: 210px;
+.post_edit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exchange_bottun{
   color: white;
   background-color: #232f3e;
   border-radius: 100px;
@@ -241,3 +252,14 @@ $shoes_height: 30px;
   
 }
   
+.edit_bottun{
+  margin-top:10px;
+  color: white;
+  text-align:center;
+  line-height:30px;
+  background-color: #232f3e;
+  border-radius: 100px;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+}

@@ -14,13 +14,10 @@ Color.create!(color_name: "blue", color_display: "ブルー" )
 Color.create!(color_name: "darkgreen", color_display: "ダークグリーン" )
 Color.create!(color_name: "green", color_display: "グリーン" )
 Color.create!(color_name: "beige", color_display: "ベージュ" )
-Color.create!(color_name: "brown", color_display: "ブラウン" )
 Color.create!(color_name: "red", color_display: "レッド" )
 Color.create!(color_name: "maroon", color_display: "ワインレッド" )
 Color.create!(color_name: "yellow", color_display: "イエロー" )
-Color.create!(color_name: "pink", color_display: "ピンク" )
 Color.create!(color_name: "orange", color_display: "オレンジ" )
-Color.create!(color_name: "purple", color_display: "パープル" )
 
 
 

@@ -12,6 +12,7 @@ body{
         font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
         font-stretch: condensed;
         text-decoration: none;
+        
       &__main__title{
         font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
         font-stretch: condensed;
@@ -27,11 +28,12 @@ body{
   line-height: 5px;
   text-decoration: none;
   font-weight: normal;
+  
 }
 .header__main__title--text{
   text-decoration: none;
   color: #fff;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 40px;
   font-weight: bolder;
   font-style : italic;

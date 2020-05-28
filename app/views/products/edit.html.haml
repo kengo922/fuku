@@ -29,10 +29,10 @@
           %span.form-require 必須
           .select-wrap
             = form.collection_check_boxes :shoes_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
+      .post
+        = form.submit '登録する', class: :form_submit_bottun
       .post_new
-        = form.submit '登録する', class: :form_bottun
-    .post_new
-      = link_to "戻る", root_path, class: "btn-default btn-gray"
+        = link_to "戻る", root_path, class: "btn-default btn-gray"
       
    
 

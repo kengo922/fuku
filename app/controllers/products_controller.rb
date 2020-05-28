@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:edit, :update]
-  
+
   def index
     @products = Product.last(1)
     @products.each do |product|
@@ -21,39 +20,38 @@ class ProductsController < ApplicationController
   end
   
   def create
-    @product = Product.new(product_params)
+    @product = Product.new(product_create_params)
     if @product.save
-      redirect_to root_path
+      redirect_to products_path
     else
+      flash[:alert] = "配色を選択して下さい！"
       render :new
     end
   end
 
   def edit
-    # @product_head_array = @product.head_color.split(",")
-    # @product_body_array = @product.boy_color.split(",")
-    # @product_leg_array = @product.leg_color.split(",")
-    # @product_shoes_array = @product.shoes_color.split(",")
+    @product = Product.find(params[:id])
     @Colors = Color.all
   end
 
   def update
-    if @product.update(product_params)
-      redirect_to root_path
+    @product = Product.find(params[:id])
+    if @product.update(product_create_params)
+      redirect_to products_path
     else
       flash[:alert] = "配色を選択して下さい！"
       redirect_to edit_product_path
     end
   end
 
+  def show
+  end
+
   private
-  def product_params
+  def product_create_params
     params.require(:product).permit(head_color:[], boy_color:[], leg_color:[], shoes_color:[])
   end
  
-  def set_product
-    @product = Product.find(params[:id])
-  end
 
 end
 

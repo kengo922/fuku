@@ -4,6 +4,10 @@
   text-align: center;
 }
 
+// #label{
+//   margin-left: 10px;
+
+// }
 
 .form-require {
   background-color: #232f3e;
@@ -23,11 +27,13 @@
   border-bottom: 3px inset;
   border-style:#f6f6f6;
 }
-.post_new{
-  margin-top: 5px;
+.post{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.form_new_bottun{
-  margin-left: 265px;
+.form_submit_bottun{
   color: white;
   background-color: #232f3e;
   border-radius: 100px;

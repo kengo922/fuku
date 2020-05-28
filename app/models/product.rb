@@ -1,9 +1,9 @@
 class Product < ApplicationRecord
   has_many :colors
-  validates :head_color, 
-  :boy_color, 
-  :leg_color, 
-  :shoes_color, 
-  presence: true
+  validates :head_color, presence: true ,acceptance: true
+  validates :boy_color, presence: true,acceptance: true
+  validates :leg_color, presence: true,acceptance: true
+  validates :shoes_color, presence: true,acceptance: true
   
+
 end

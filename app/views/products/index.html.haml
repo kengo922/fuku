@@ -27,8 +27,11 @@
     .blank_shoes_center
     .shoes#shoes_rigth
   %form.form
-    %input{type: "button", value:"更新" ,onclick:"effect1()", class: "form_index_bottun"}/
-  .post_new
-    = link_to "新規登録", new_product_path, class: "btn-default btn-gray"
+    %input{type: "button", value:"コーデチェンジ" ,onclick:"effect1()", class: "exchange_bottun"}/
   .post_edit
-    = link_to "色編集", "/products/#{@products[0].id}/edit", class: "btn-default btn-gray"
+    = link_to "色編集", "/products/#{@products[0].id}/edit", class: "edit_bottun"
+  .post_new
+    = link_to "配色の登録", new_product_path, class: "btn-default btn-gray"
+  
+
+  

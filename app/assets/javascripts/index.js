@@ -24,7 +24,7 @@ function effect1(){
   var index3 = Math.floor(Math.random() * leg_color.length); 
   node2.forEach(function(elem2){
   //forEachでクラス要素を一つずつ取り出し、値を付与している
-  elem2.style.backgroundColor = boy_color[index3]; 
+  elem2.style.backgroundColor = leg_color[index3]; 
   });
 
   var nodelist3 = document.querySelectorAll (".shoes");
@@ -34,10 +34,8 @@ function effect1(){
   var index4 = Math.floor(Math.random() * shoes_color.length); 
   node3.forEach(function(elem3){
   //forEachでクラス要素を一つずつ取り出し、値を付与している
-  elem3.style.backgroundColor = boy_color[index4]; 
+  elem3.style.backgroundColor = shoes_color[index4]; 
   });
-
-
 
 };
 
