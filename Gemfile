@@ -65,3 +65,4 @@ gem 'rails-i18n'
 gem "haml-rails"
 gem "jquery-rails"
 gem "gon" #JSにデータベースの値を簡単に渡してくれる
+gem 'rails_12factor', group: :production
