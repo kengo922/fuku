@@ -30,8 +30,8 @@
     %input{type: "button", value:"コーデチェンジ" ,onclick:"effect1()", class: "exchange_bottun"}/
   .post_edit
     = link_to "色編集", "/products/#{@products[0].id}/edit", class: "edit_bottun"
-  .post_new
-    = link_to "配色の登録", new_product_path, class: "btn-default btn-gray"
+  -# .post_new
+  -#   = link_to "配色の登録", new_product_path, class: "btn-default btn-gray"
   
 
   
