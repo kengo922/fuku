@@ -7,7 +7,6 @@
   margin-right:auto;
   margin-bottom:0;
   margin-left:auto;
-  
 }
 
 $color1:  #F0DDC3;
@@ -45,7 +44,6 @@ $color2:  #000000;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
-
 }
 
 //上半身
@@ -54,7 +52,7 @@ $body_upper_height1: 100px; //ボディーとブランク高さを定義
   @extend .center1;
 }
 .upper_body{
-  background: $color2;
+  background: white;
 }
 #upper-body-center1{
   width: 200px;
@@ -236,12 +234,6 @@ $shoes_height: 30px;
   justify-content: center;
 }
 
-.post_edit{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .exchange_bottun{
   color: white;
   background-color: #232f3e;
@@ -249,9 +241,13 @@ $shoes_height: 30px;
   width: 300px;
   height: 40px;
   font-weight: bold;
-  
 }
-  
+ 
+.post_edit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .edit_bottun{
   margin-top:10px;
   color: white;

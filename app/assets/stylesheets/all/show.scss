@@ -9,12 +9,10 @@
   margin-left:auto;
 }
 .show_title{
-  
   text-align: center;
   color: #232f3e;
   font-size: 30px;
 }
-
 .main_show{
   border-top: double 10px #232f3e;
   margin-top: 3px inset;
@@ -27,10 +25,51 @@
 }
 
 .left_show{
-  width: 50%;
-  height: 620px;
+  max-width: 50%;
+  height: auto;
+  
 }
 .rigth_show{
+  padding: 10px;
   width: 50%;
-  height: 620px;
+  height: auto;
+}
+
+.post_show{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show_bottun{
+  margin:10px 0;
+  font-size: 15px;
+  color: white;
+  text-align:center;
+  background-color: #232f3e;
+  border-radius: 100px;
+  width:200px;
+  line-height:30px;
+  height: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.rigth_show{
+  text-align: left;
+  font-size: 20px;
+}
+
+.overview{
+  font-size: 15px;
+  padding: 10px;
+}
+.note{
+  font-size: 15px;
+}
+#p{
+  text-indent: 1em;
+}
+.attention{
+font-size: 12px;
+color: red;
 }

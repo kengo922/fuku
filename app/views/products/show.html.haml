@@ -2,7 +2,26 @@
   %h2.show_title
     テトラードへようこそ！！
     .main_show 
-      .left_show ああ
-      .rigth_show ああ
-  .post_new
-    = link_to "配色の登録画面", new_product_path, class: "btn-default btn-gray"
+      .left_show 
+        = link_to root_path do
+          = image_tag asset_path("explanation.png"),class: "picture", alt: "explanation.png"
+      .rigth_show 
+        .rigth_title
+          ●概要
+        .overview
+          自身の持っている服装の色を登録して、コーディネートを完成させましょう！！
+        .explanation 
+          ●使い方
+        .note
+          %p  下記の部位の色を配色登録画面で選択してください。
+          %ul{type: "disc"}
+            %li ・ヘッドカラー
+            %li ・ボディーカラー
+            %li ・レッグカラー
+            %li ・シューズカラー
+          %p
+            登録後、配色変更ボタンを押すことでランダムに4つの部位の色が切り替わります。
+          %p.attention
+            ※ 色の選択を行わないと左記の図と同じ色が自動で選択されます。
+        .post_show
+          = link_to "配色の登録画面", new_product_path, class: "show_bottun"
