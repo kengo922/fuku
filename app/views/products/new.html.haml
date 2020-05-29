@@ -4,31 +4,31 @@
   = form_with model: @product, class: :form, local: true do |form| #form_with model: モデルクラスのインスタンス do |form|
     .main_new
       .main_errors
-      = render 'layouts/flash_messages' 
+      = render 'error_message', locals: {products: @product}
       .head_color
         %label
           ヘッドカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :head_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
+            = form.collection_check_boxes :head_color, Color.all, :color_name, :color_display,  include_hidden: true, class: "input-default"
       .upper_body-color
         %label
           ボディーカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :boy_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
+            = form.collection_check_boxes :boy_color, Color.all, :color_name, :color_display,  include_hidden: true, class: "input-default"
       .leg-color
         %label
           レッグカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :leg_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
+            = form.collection_check_boxes :leg_color, Color.all, :color_name, :color_display,  include_hidden: true, class: "input-default"
       .shose-color
         %label
           シューズカラー
           %span.form-require 必須
           .select-wrap
-            = form.collection_check_boxes :shoes_color, Color.all, :color_name, :color_display,  include_hidden: false, class: "input-default"
+            = form.collection_check_boxes :shoes_color, Color.all, :color_name, :color_display,  include_hidden: true, class: "input-default"
       .post
         = form.submit '配色を登録する', class: :form_submit_bottun
     

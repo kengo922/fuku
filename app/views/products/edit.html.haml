@@ -4,7 +4,7 @@
   = form_with model: @product, class: :form, local: true do |form| #form_with model: モデルクラスのインスタンス do |form|
     .main_new
       .main_errors
-      = render 'layouts/flash_messages' 
+      = render 'error_message', locals: {products: @product}
       .head_color
         %label
           ヘッドカラー

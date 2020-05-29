@@ -8,15 +8,16 @@ body{
     width: 100%;
     padding: 0 150px;
     background-color: #232f3e;
+    display: flex;
+    justify-content: space-between;
       &___sub__title{
         font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
         font-stretch: condensed;
         text-decoration: none;
-        
-      &__main__title{
-        font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
-        font-stretch: condensed;
-      }
+        &__main__title{
+          font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+          font-stretch: condensed;
+        }
     }
   }
 }    
@@ -52,3 +53,16 @@ small {
   font-size: 8px;
   color: white;
 }
+
+.header__right{
+  font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  &--btn{
+    font-weight: bolder;
+    text-decoration: none;
+    line-height: 70px;
+    color: #fff;
+    margin-right: 30px;
+  }
+}   

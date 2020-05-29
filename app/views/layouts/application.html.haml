@@ -12,8 +12,10 @@
     %header.header
       .header__sub__title
         = link_to "自動配色選択コーディネートアプリ", '#', class: "header__sub__title--text"
-      .header__main__title
-        = link_to "Tetrads(テトラード)", '#', class: "header__main__title--text"
+        .header__main__title
+          = link_to "Tetrads(テトラード)", '#', class: "header__main__title--text"
+      .header__right
+        %a{href: "https://forms.gle/hfLXM2LF9Q1Dkorg6",class: "header__right--btn"} お問い合わせ
     = yield
 
     %footer.footer

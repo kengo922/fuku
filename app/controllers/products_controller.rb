@@ -48,7 +48,7 @@ class ProductsController < ApplicationController
   end
 
   private
-  def product_create_params
+  def product_create_params 
     params.require(:product).permit(head_color:[], boy_color:[], leg_color:[], shoes_color:[])
   end
  

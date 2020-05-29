@@ -1,0 +1,36 @@
+.main{
+  background-color: #fff;
+  height: 620px;
+  width: 70%;
+  overflow: scroll;
+  margin-top:20px;
+  margin-right:auto;
+  margin-bottom:0;
+  margin-left:auto;
+}
+.show_title{
+  
+  text-align: center;
+  color: #232f3e;
+  font-size: 30px;
+}
+
+.main_show{
+  border-top: double 10px #232f3e;
+  margin-top: 3px inset;
+  border-style:#f6f6f6;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.left_show{
+  width: 50%;
+  height: 620px;
+}
+.rigth_show{
+  width: 50%;
+  height: 620px;
+}
