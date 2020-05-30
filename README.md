@@ -13,3 +13,29 @@
 ### 開発期間  
   - 開発期間 : 28日間(5/18 ~ 5/29)  
   - 平均作業時間 : 12時間以上/ 1日あたり 
+
+
+## productsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|head_color|string||
+|boy_color|string|| 
+|leg_color|string|| 
+|shoes_color|string|| 
+
+### Association
+- has_many :colors
+- validates :head_color, presence: true 
+- validates :boy_color, presence: true
+- validates :leg_color, presence: true
+- validates :shoes_color, presence: true
+
+
+## Commentsテーブル(中間テーブル)
+|Column|Type|Options|
+|------|----|-------|
+|color_name|string||
+|color_display|reference|null: false|
+
+### Association
+- belongs_to :product, optional: true
