@@ -47,7 +47,7 @@
 ## Commentsテーブル(中間テーブル)
 |Column|Type|Options|
 |------|----|-------|
-|color_name|string||
+|color_name|string|null: false|
 |color_display|reference|null: false|
 
 ### Association
